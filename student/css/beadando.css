@@ -1,0 +1,74 @@
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    width:100%;
+    box-shadow: 0px 5px 10px grey;
+
+    border: 1px solid black;
+}
+
+#cookieBox{
+    float: right;
+    display:inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    background-color: #333;
+    overflow: hidden;
+
+    border: 1px black;
+}
+
+table {
+    float:right;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.topnav button {
+    float: left;
+    display:inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    background-color: #333;
+    overflow: hidden;
+
+    border: 1px black;
+}
+
+.topnav button:hover {
+    background-color: #969696;
+    color: black;
+}
+
+.topnav button#homeButton {
+    background-color: #0c4767;
+    color: white;
+}
+
+#everything {
+    margin: auto;
+    width: 100%;
+}
+
+body {
+    background-color: #969696;
+}
+
+#fancyTable td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+#fancyTable th {
+    border-bottom: 2px dashed black;
+    font-size: 110%;
+}
