@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-    // language=JQuery-CSS
     $("#content").load("html/home.html");
 
     $("#homeButton").click(function () {
@@ -24,7 +22,7 @@ $(document).ready(function() {
     });
 });
 
-//init-ek következnek:
+
 
 function initListManu(){
     $("#content").html("");
@@ -46,8 +44,6 @@ function initAddCar(){
     addCar();
 }
 
-//A funkciók következnek:
-
 
 
 function addManu(){
@@ -67,8 +63,8 @@ function addManu(){
 
     var foundedCell = $('<td>Founded</td>');
     var foundedRow = $("<tr></tr>");
-    var foundedInput = '<td><input type="text" name="founded" required="required" autofocus="true"></td>';
-    //A francia Peugeot céget 1810-ben alapították meg. Ezt a céget vehetjü az első autó márkának.
+    var foundedInput = '<td><input type="date" min="1810-01-01" name="founded" required="required" autofocus="true"></td>';
+    //In this case, we consider Peugeot as the first car manufacturer, as it was founded in 1810.
     foundedRow.append(foundedCell, foundedInput);
 
     var submitRow=$("<tr></tr>");
@@ -91,10 +87,10 @@ function addManu(){
             type: 'POST',
             data: $(formHTML).serialize(),
             success: function() {
-                alert("Siker!");
+                alert("Successfully added Manufacturer to list.");
             },
             error: function() {
-                alert("Nem sikerült. Ismeretlen hiba.");
+                alert("Unsuccessful operation. Unknown error.");
             }
         })
     });
@@ -122,7 +118,6 @@ function addCar() {
 
     var manufacturerCell = $('<td>Manufacturer</td>');
     var manufacturerRow = $("<tr></tr>");
-    //var manufacturerInput = '<td><input type="text" name="manufacturer" required="required" autofocus="true"></td>';
     var manufacturerInput = $('<td></td>');
     var manufacturerSelect = $('<select type="text" name="manufacturer" required="required" autofocus="true"></select>')
 
@@ -144,7 +139,7 @@ function addCar() {
     var yearCell = $('<td>Year</td>');
     var yearRow = $("<tr></tr>");
     var yearInput = '<td><input type="number" min="1908" name="year" required="required" autofocus="true"></td>';
-    //A Ford Model T autója volt az első "megfizethető" autó, amit 1908-ban gyártottak először.
+    //Ford's Model T was the first commercially available car for the common folk. It was first manufactured in 1908.
     yearRow.append(yearCell, yearInput);
 
     var horsepowerCell = $('<td>Horsepower</td>');
@@ -172,10 +167,10 @@ function addCar() {
                 type: 'POST',
                 data: $(formHTML).serialize(),
                 success: function() {
-                    alert("Siker!");
+                    alert("Successfully added Car to list.");
                 },
                 error: function() {
-                        alert("Nem sikerült. Ismeretlen hiba.");
+                    alert("Unsuccessful operation. Unknown error.");
                 }
             })
         });
