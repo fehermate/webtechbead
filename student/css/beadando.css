@@ -77,3 +77,12 @@ body {
     background-color: #333;
     color: #f2f2f2;
 }
+
+#homeTable td{
+    width:50%;
+}
+
+img {
+    width:25%;
+    height:25%;
+}
