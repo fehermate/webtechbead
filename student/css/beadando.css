@@ -72,3 +72,8 @@ body {
     border-bottom: 2px dashed black;
     font-size: 110%;
 }
+
+#fancyCell:hover{
+    background-color: #333;
+    color: #f2f2f2;
+}

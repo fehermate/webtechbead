@@ -211,7 +211,7 @@ function listManu(){
 
         $.each(data, function (key, value){
             var row = $('<tr></tr>');
-            var nameCell = $('<td onclick="addCookie(' + "'" + value.name + "'" +')">' + value.name + '</td>');
+            var nameCell = $('<td id="fancyCell" onclick="addCookie(' + "'" + value.name + "'" +')">' + value.name + '</td>');
 
             var countryCell = $('<td>' + value.country + '</td>');
             var foundedCell = $('<td>' + value.founded + '</td>');
